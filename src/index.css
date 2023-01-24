@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(255, 252, 241);
+  background-color: rgb(255, 251, 241);
 }
 
 
@@ -31,7 +31,7 @@
 
 .race-container div {
   border: solid;
-  height: 65vh;
+  height: 700px;
   width: 15vw;
   text-align: center;
 }
