@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  background-color: rgb(255, 252, 241);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.race-container {
+  display: flex;
+  margin-top: 15vh;
+  justify-content: space-around;
+  flex-grow: 100vh;
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+#home-button {
+  display: absolute;
+  border-radius: 0 0 15px 0;
+  background-color: rgb(78, 13, 51);
+  width: 25vw;
+  height: 70px;
+  border: solid;
+  margin: 0px;
+  padding: 0px;
+}
+
+#home-button h1 {
+  color: rgb(255, 229, 196);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.race-container div {
+  border: solid;
+  height: 65vh;
+  width: 15vw;
+  text-align: center;
+}
+
+.race-container div h1 {
+  margin-top: 110px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#men {
+  background-color: rgb(230, 230, 230);
+}
+
+#elves {
+  background-color: rgb(217, 253, 217);
+}
+
+#maiar {
+  background-color: rgb(209, 236, 245);
+}
+
+#dwarves {
+  background-color: rgb(163, 163, 163);
+}
+
+#orc-kind {
+  background-color: rgb(22, 22, 22);
+}
+
+#men h1 {
+  color: rgb(226, 127, 6);
+}
+
+#elves h1 {
+  color: rgb(4, 128, 128);
+}
+
+#maiar h1 {
+  color: rgb(226, 127, 6);
+}
+
+#dwarves h1 {
+  color: rgb(255, 217, 3);
+}
+
+#orc-kind h1 {
+  color: rgb(212, 5, 5);
 }
