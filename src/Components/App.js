@@ -1,6 +1,6 @@
 //import './App.css';
 //import { Switch, Route } from "react-router-dom";
-import Characters from "../db.json";
+import Characters from "../json-server/db/db.json";
 import Header from "./Header";
 import RaceList from "./RaceList";
 
