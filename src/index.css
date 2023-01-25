@@ -1,15 +1,25 @@
 * {
-  background-color: rgb(255, 251, 241);
+  background-color: rgb(250, 243, 225);
 }
 
+/* .App {
+  display: flex;
+  flex-direction: column;
+} */
 
 .race-container {
   display: flex;
+  overflow-wrap: wrap;
   margin-top: 15vh;
-  justify-content: space-around;
-  flex-grow: 100vh;
-  width: 90vw;
   margin-left: 5vw;
+  justify-content: space-between;
+  height: min-content;
+  width: 90vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 #home-button {
@@ -17,10 +27,9 @@
   border-radius: 0 0 15px 0;
   background-color: rgb(78, 13, 51);
   width: 25vw;
-  height: 70px;
+  height: min-content;
   border: solid;
-  margin: 0px;
-  padding: 0px;
+  border-color: black;
 }
 
 #home-button h1 {
@@ -29,16 +38,97 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.race-container div {
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.race-container .race {
   border: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 5px 5px 5px 5px;
   height: 700px;
-  width: 15vw;
+  width: 400px;
   text-align: center;
+  /* flex-basis: 300px;
+  flex-grow: 0;
+  flex-shrink: 0; */
 }
 
-.race-container div h1 {
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+  padding: 1.75rem;
+}
+
+input,
+textarea,
+select {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 2px solid black;
+}
+
+.race-container .race:hover {
+  /* border-width: 3px; */
+  border-top-width: 10px;
+  border-radius: 20px 20px 5px 5px;
+  border-color: rgb(78, 13, 51);
+}
+
+.race-container .race h1 {
   margin-top: 110px;
   background-color: rgba(0, 0, 0, 0);
+}
+
+.characters-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.character-card {
+  border: solid;
+  border-color: black;
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+  width: max-content;
+}
+
+.characters-list {
+  flex-direction: column;
+  margin-top: 3vh;
+  margin-left: 6.5vw;
+  height: 80vh;
+  width: min-content; 
+  overflow: scroll;
+  justify-content: space-between;
+}
+
+.character-details {
+  max-width: 40vw;
+  margin-left: 20vw;
+  margin-top: 12vh;
+}
+
+.character-details img {
+  width: 500px;
+  height: auto;
+  border: solid;
+  border-color: black;
 }
 
 #men {
