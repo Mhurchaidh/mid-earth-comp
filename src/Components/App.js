@@ -1,6 +1,6 @@
 //import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Characters from "../json-server/db/db.json";
+import Characters from "../db.json";
 import Header from "./Header";
 import RaceList from "./RaceList";
 import Form from "./Form";
@@ -14,7 +14,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(() => {
-    fetch('http://localhost:4000/characters')
+    fetch('http://localhost:3000/characters')
     .then(resp => resp.json())
     .then(characters => setCharactersArray(characters))
   }, [])
@@ -27,7 +27,6 @@ function App() {
 
     <div className="App">
       <Header />
-      <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       <Routes>
         <Route exact path = '/' element={<RaceList characters={charactersArray} searchTerm={searchTerm}/>}/>
         <Route path='/addnew' element={<Form onFormSubmit={onFormSubmit}/>}/>
@@ -35,7 +34,7 @@ function App() {
         <Route path='/elves' element={<CharacterHolder race={"Elves"} characters={charactersArray}/>}/>
         <Route path='/maiar' element={<CharacterHolder race={"Maiar"} characters={charactersArray}/>}/>
         <Route path='/dwarves' element={<CharacterHolder race={"Dwarves"} characters={charactersArray}/>}/>
-        <Route path='/orc-kind' element={<CharacterHolder race={"orc-kind"} characters={charactersArray}/>}/>
+        <Route path='/orc-kind' element={<CharacterHolder race={"Orcs"} characters={charactersArray}/>}/>
       </Routes>
     </div>
   );

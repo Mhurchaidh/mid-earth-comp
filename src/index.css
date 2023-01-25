@@ -2,11 +2,6 @@
   background-color: rgb(250, 243, 225);
 }
 
-/* .App {
-  display: flex;
-  flex-direction: column;
-} */
-
 .race-container {
   display: flex;
   overflow-wrap: wrap;
@@ -88,6 +83,7 @@ select {
   border-top-width: 10px;
   border-radius: 20px 20px 5px 5px;
   border-color: rgb(78, 13, 51);
+  cursor: url("./Symbols/oneringpng.png") auto;
 }
 
 .race-container .race h1 {
@@ -105,13 +101,17 @@ select {
   border-color: black;
   border-radius: 5px 5px 5px 5px;
   text-align: center;
-  width: max-content;
+  width: 10vw;
+}
+
+.search {
+  max-height: 5vh;
 }
 
 .characters-list {
   flex-direction: column;
   margin-top: 3vh;
-  margin-left: 6.5vw;
+  margin-left: 7vw;
   height: 80vh;
   width: min-content; 
   overflow: scroll;
@@ -119,8 +119,8 @@ select {
 }
 
 .character-details {
-  max-width: 40vw;
-  margin-left: 20vw;
+  max-width: 60vw;
+  margin-left: 13vw;
   margin-top: 12vh;
 }
 
@@ -129,6 +129,41 @@ select {
   height: auto;
   border: solid;
   border-color: black;
+}
+
+.character-details p {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.symbol {
+  max-width: 70%;
+  max-height: 100%;
+  
+}
+
+.men {
+  margin-top: 3vh;
+  background-color: rgb(230, 230, 230);
+}
+
+.elves {
+  margin-top: 12vh;
+  background-color: rgb(217, 253, 217);
+}
+
+.maiar {
+  margin-top: 5vh;
+  background-color: rgb(209, 236, 245);
+}
+
+.dwarves {
+  background-color: rgb(163, 163, 163);
+}
+
+.orc-kind {
+  background-color: rgb(22, 22, 22);
 }
 
 #men {

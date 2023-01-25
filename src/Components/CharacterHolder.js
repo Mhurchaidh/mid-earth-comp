@@ -1,23 +1,21 @@
 import Character from './Character';
 import CharacterDetails from './CharacterDetails';
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Search from "./Search";
 
 function CharacterHolder({race, characters}) {
-
+    const [searchTerm, setSearchTerm] = useState("")
     
-    const filteredList = characters.filter(character => {
-        if(race === 'orc-kind') {
-            if(character.race === "Uruk-hai" || character.race === "Orcs") {
-                return character
-            }
-        }
-        else return character.race === race
-    })
+    const filteredList = characters.filter(character => character.race === race
+    )
+    .sort((characterA, characterB) => characterA.name.localeCompare(characterB.name))
+    .filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()))
 
     const [currentCharacter, setCurrentCharacter] = useState(filteredList[0])
 
     const onCharacterChange = (id) => {
-        const selectedCharacter = filteredList.find(character => character.id === id)
+        const selectedCharacter = filteredList.find(character => character.lotr_page_id === id)
         setCurrentCharacter(selectedCharacter);
     }
 
@@ -28,10 +26,17 @@ function CharacterHolder({race, characters}) {
 
     return (
         <div className='characters-page'>
-            <div className='characters-list'>
-                {characterList}
+            <div>
+                <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+                <div className='characters-list'>
+                    {characterList}
+                </div>
             </div>
-            <CharacterDetails character={currentCharacter}/>
+            {/* {testing for nested routes} */}
+            <Routes>
+                <Route path={`${currentCharacter.race}/${currentCharacter.name}`} element={/*move this back out below div*/<CharacterDetails character={currentCharacter}/>}/>
+            </Routes>
+            
         </div>
     )
 }
