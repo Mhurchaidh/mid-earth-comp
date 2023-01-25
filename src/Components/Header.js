@@ -1,12 +1,13 @@
-import Search from "./Search";
-import Form from "./Form";
+import { Link } from 'react-router-dom';
 
 function Header() {
+
     return (
-        <div id="home-button">
-            <h1>Races of Middle-Earth</h1>
-            <Search />
-            <Form />
+        <div className="header">
+            <Link id="home-button" to='/'>
+                <h1>Races of Middle-Earth</h1>
+            </Link>
+            <Link to='/addnew'>Add New</Link>
         </div>
     )
 }
