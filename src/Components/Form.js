@@ -6,14 +6,13 @@ function Form({onFormSubmit}) {
         name: '',
         race: 'Men',
         gender: '',
-        image: '',
-        imageA: '',
-        description: ''
+        culture: '',
+        text: '',
     }
 
     const [formData, setFormData] = useState(initialFormData);
 
-    const {name, race, gender, image, imageA, description} = formData;
+    const {name, race, culture, gender, text} = formData;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -46,12 +45,11 @@ function Form({onFormSubmit}) {
                     <option>Elves</option>
                     <option>Maiar</option>
                     <option>Dwarves</option>
-                    <option>Orc-kind</option>
+                    <option>Orcs</option>
                 </select>
+                <input value={culture} type='text' name='culture' placeholder='Culture...' onChange={handleFormChange}/>
                 <input value={gender} name='gender' type='text' placeholder="Gender..." onChange={handleFormChange}/>
-                <input value={image} name='image' type='text' placeholder="Image URL..." onChange={handleFormChange}/>
-                <input value={imageA} name='imageA' type='text' placeholder="Action Image..." onChange={handleFormChange}/>
-                <input value={description} name='description' type='text' placeholder='Description...' onChange={handleFormChange}/>
+                <input value={text} name='text' type='text' placeholder='Description...' onChange={handleFormChange}/>
                 <button>Submit</button>
             </form>
         </div>
