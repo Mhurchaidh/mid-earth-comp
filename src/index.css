@@ -96,6 +96,10 @@ select {
   flex-direction: row;
 }
 
+.characters-page-left {
+  flex-direction: column;
+}
+
 .character-card {
   border: solid;
   border-color: black;
@@ -110,8 +114,7 @@ select {
 
 .characters-list {
   flex-direction: column;
-  margin-top: 3vh;
-  margin-left: 7vw;
+  margin-top: 5vh;
   height: 80vh;
   width: min-content; 
   overflow: scroll;

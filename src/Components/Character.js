@@ -1,14 +1,10 @@
 import { Link } from 'react-router-dom';
 
-function Character({character, onCharacterChange}) {
+function Character({character}) {
     const {name, image} = character;
 
-    const handleCharacterChange = () => {
-        onCharacterChange(character.lotr_page_id)
-    }
-
     return (
-        <Link to={character.name} className="character-page" onClick={handleCharacterChange}>
+        <Link to={`${character.name.toLowerCase()}`} className="character-page">
             <div className="character-card">
                 <h3>{name}</h3>
                 <img src={image}/>

@@ -25,7 +25,7 @@ function Form({onFormSubmit}) {
             body: JSON.stringify(formData)
         }
 
-        fetch('http://localhost:4000/characters', config)
+        fetch('http://localhost:3000/characters', config)
         .then(resp => resp.json())
         .then(onFormSubmit)
         .then(setFormData(initialFormData))
