@@ -201,6 +201,7 @@ a:active { text-decoration: none; }
   height: 40%;
   top: 20%;
   left: 25%;
+  border: none;
 }
 
 .inputType {
@@ -217,7 +218,7 @@ select {
   font-family: 'Bilbohand';
   font-weight: bold;
   transition: all 0.3s;
-  border: 0.5px solid black;
+  border: 0.5px solid rgb(185, 153, 92);
 }
 
 .search input {
