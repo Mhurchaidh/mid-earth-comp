@@ -8,9 +8,33 @@
 
   --men-header: rgb(226, 127, 6);
   --elven-header: rgb(25, 180, 180);
-  --maiar-header: rgb(207, 43, 139);
+  --maiar-header: rgb(0, 255, 255);
   --dwarven-header: rgb(255, 182, 45);
   --orc-header: rgb(212, 36, 5);
+}
+
+@font-face {
+  font-family: 'RingbearerMedium';
+  src: url('./Fonts/Ringbearer/RingbearerMedium-51mgZ.ttf')
+}
+
+@font-face {
+  font-family: 'Bilbohand';
+  src: url('./Fonts/Bilbohand/BilboHandRegular-L3MZ.ttf')
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(2, 2, 2, 0.486);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(94, 94, 94);
 }
 
 .App {
@@ -23,38 +47,31 @@
   background-repeat: no-repeat;
 }
 
-/* .new {
-  background-image: url('./Symbols/scroll.png');
-  background-position: center;
-  background-size: 70vh;
-  background-repeat: no-repeat;
-} */
-
 .men-page {
-  background-image: url('./Symbols/minastirith.jpg');
+  background-image: url('./Symbols/witchkingvseowyn.jpg');
   background-position: center;
-  background-size: 230vh;
+  background-size: 220vh;
   background-repeat: no-repeat;
 }
 
 .elves-page {
   background-image: url('./Symbols/rivendell.png');
   background-position: center;
-  background-size: 200vh;
+  background-size: 220vh;
   background-repeat: no-repeat;
 }
 
 .maiar-page {
-  background-image: url('./Symbols/gandalfvsbalrog.jpg');
+  background-image: url('./Symbols/maiarbattle.jpg');
   background-position: center;
-  background-size: 200vh;
+  background-size: 220vh;
   background-repeat: no-repeat;
 }
 
 .dwarves-page {
   background-image: url('./Symbols/erebor.jpg');
   background-position: center;
-  background-size: 200vh;
+  background-size: 240vh;
   background-repeat: no-repeat;
 }
 
@@ -63,10 +80,6 @@
   background-position: center;
   background-size: 260vh;
   background-repeat: no-repeat;
-}
-
-.elves-span {
-  background-color: black;
 }
 
 .addNew h3{
@@ -81,7 +94,7 @@
 .race-container {
   display: flex;
   overflow-wrap: wrap;
-  margin-top: 15vh;
+  margin-top: 13vh;
   margin-left: 5vw;
   justify-content: space-between;
   height: min-content;
@@ -94,10 +107,13 @@
   width: 100vw;
 }
 
+.addNew {
+  width: min-content;
+}
+
 #home-button {
   display: absolute;
   border-radius: 0 0 15px 0;
-  /* background-color: rgb(78, 13, 51); */
   background-color: rgb(46, 46, 46);
   width: 18vw;
   height: 6vh;
@@ -107,11 +123,11 @@
 }
 
 #home-button h1 {
-  /* color: rgb(255, 229, 196); */
   color: rgb(179, 151, 100);
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 2.5vh;
+  font-size: 1.3vw;
+  font-family: 'RingbearerMedium';
   margin-top: 1.5vh;
 }
 
@@ -131,29 +147,22 @@ a:active { text-decoration: none; }
   border-width: 1px;
   border-color: black;
   border-radius: 5px 5px 5px 5px;
-  height: 700px;
-  width: 400px;
+  height: 52vh;
+  width: 15vw;
   text-align: center;
   background-color: rgb(46, 46, 46);
-  /* flex-basis: 300px;
-  flex-grow: 0;
-  flex-shrink: 0; */
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  /* width: 500px; */
   width: 40vw;
-  /* min-width: 670px; */
   height: 80vh;
-  /* min-height: 1000px; */
   margin: 0 auto;
   padding: 3rem;
   background-color: rgba(0, 0, 0, 0);
   background-image: url('./Symbols/scroll.png');
   background-position: center;
-  /* background-size: 800px; */
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -200,24 +209,26 @@ a:active { text-decoration: none; }
   background-color: rgba(0, 0, 0, 0);
 }
 
-/* input,
+input,
 textarea,
 select {
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
   border: none;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  font-family: 'Bilbohand';
   font-weight: bold;
   transition: all 0.3s;
-  border: 2px solid black;
-} */
+  border: 0.5px solid black;
+}
+
+.search input {
+  color: white;
+  background-color: rgba(32, 32, 32, 0.856);
+  border-radius: 18px 18px 18px 18px;
+}
 
 .race-container .race:hover {
-  /* border-width: 3px; */
   border-top-width: 10px;
   border-radius: 20px 20px 5px 5px;
-  /* border-color: rgb(78, 13, 51); */
   border-color: rgb(179, 151, 100);
   cursor: url("./Symbols/oneringpng.png") auto;
 }
@@ -233,14 +244,11 @@ select {
 
 .characters-page-left {
   flex-direction: column;
-  margin-left: 90px;
-  margin-top: 15vh;
+  margin-left: 4vw;
+  margin-top: 8vh;
 }
 
 .character-card {
-  /* border: solid;
-  border-color: black;
-  border-radius: 5px 5px 5px 5px; */
   text-align: center;
   width: 10vw;
 }
@@ -279,16 +287,21 @@ select {
   overflow: scroll;
   overflow-x: hidden;
   justify-content: flex-start;
+  margin-top: 5vh;
+  background-color: rgba(0, 0, 0, 0.315);
+  border-radius: 20px 20px 20px 20px;
 }
 
 .characters-list::-webkit-scrollbar {
   display: none;
 }
 
+
+
 .character-details {
   max-width: 60vw;
-  margin-left: 13vw;
-  margin-top: 20vh;
+  margin-left: 8vw;
+  margin-top: 15vh;
 }
 
 .character-details img {
@@ -300,21 +313,19 @@ select {
 
 .character-details h1 {
   margin-bottom: 5vh;
+  font-size: 50px;
 }
 
 .character-details p {
-  font-family: sans-serif;
+  font-family: 'sans-serif';
+  font-size: 20px;
   margin-top: 5vh;
   letter-spacing: 1px;
   line-height: 1.7;
   overflow: scroll;
+  overflow-x: hidden;
   height: min-content;
   max-height: 50vh;
-  background-color: rgba(20, 20, 20, 0.61);
-}
-
-.character-details p::-webkit-scrollbar {
-  display: none;
 }
 
 .symbol {
@@ -329,52 +340,12 @@ select {
 
 #white-tree {
   margin-top: 3vh;
+  height: 50%;
 }
 
 #black-speech {
   margin-top: 5vh;
 }
-
-/* .men {
-  background-color: var(--men-background);
-}
-
-.elves {
-  background-color: var(--elven-background);
-}
-
-
-.maiar {
-  background-color: var(--maiar-background);
-}
-
-.dwarves {
-  background-color: var(--dwarven-background);
-}
-
-.orcs {
-  background-color: var(--orc-background);
-} */
-
-/* #men {
-  background-color: var(--men-background);
-}
-
-#elves {
-  background-color: var(--elven-background);
-}
-
-#maiar {
-  background-color: var(--maiar-background);
-}
-
-#dwarves {
-  background-color: var(--dwarven-background);
-}
-
-#orc-kind {
-  background-color: var(--orc-background);
-} */
 
 #men h1 {
   color: var(--men-header);
@@ -416,16 +387,54 @@ select {
   color: var(--orc-header);
 }
 
+.men-h2 {
+  color: rgb(255, 255, 255)
+}
+
+.maiar-h2 {
+  color: rgb(3, 3, 3);
+}
+
+.dwarves-h2 {
+  color: rgb(90, 252, 176)
+}
+
+.elves-h2 {
+  color: rgb(250, 232, 132);
+}
+
+.orcs-h2 {
+  color: rgb(255, 166, 0);
+}
+
 .orcs-p {
   color: white;
+  background-color: rgba(27, 27, 27, 0.712);
+  border-radius: 4px 10px 10px 4px;
 }
 
 .elves-p {
-  color: var(--elven-background)
+  color: var(--elven-background);
+  background-color: rgba(27, 27, 27, 0.712);
+  border-radius: 4px 10px 10px 4px;
 }
 
 .men-p {
   color: var(--men-background);
+  background-color: rgba(22, 22, 22, 0.76);
+  border-radius: 4px 10px 10px 4px;
+}
+
+.maiar-p {
+  color: var(--maiar-background);
+  background-color: rgba(27, 27, 27, 0.712);
+  border-radius: 4px 10px 10px 4px10
+}
+
+.dwarves-p {
+  color: rgb(218, 218, 218);
+  background-color: rgba(27, 27, 27, 0.712);
+  border-radius: 4px 10px 10px 4px;
 }
 
 .race-symbol {

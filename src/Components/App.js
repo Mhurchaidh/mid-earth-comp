@@ -34,7 +34,9 @@ function App() {
       <Routes>
         <Route path = '/' element={
         <div>
-          <Link className='addNew' to='/addnew' onClick={() => onRaceChange('new')}><h3>Add New Character</h3></Link>
+          <div className='addNew'>
+            <Link  to='/addnew' onClick={() => onRaceChange('new')}><h3>Add New Character</h3></Link>
+          </div>
           <RaceList characters={charactersArray} onRaceChange={onRaceChange}/>
         </div>}/>
         <Route path='/addnew' element={<Form onFormSubmit={onFormSubmit}/>}/>
