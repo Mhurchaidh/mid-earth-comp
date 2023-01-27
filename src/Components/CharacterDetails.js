@@ -10,9 +10,9 @@ function CharacterDetails({characters}) {
         <div className="character-details">
             <h1 className={`${characterRace}-h1`}>{character.name}</h1>
             <h2 className={`${characterRace}-h2`}>{character.culture} - {character.gender}</h2>
-            <span className={`${characterRace}-span`}>
+            <div className={`${characterRace}-helper`}>
                 <p className={`${characterRace}-p`}>{character.text}</p>
-            </span>
+            </div>
             
         </div>
     )

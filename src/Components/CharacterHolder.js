@@ -2,18 +2,16 @@ import Character from './Character';
 import Search from "./Search";
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import pngegg from "../Symbols/pngegg.png";
 import mirkwood from "../Symbols/mirkwood.png.png";
 import maiar from "../Symbols/maiar-symbol.png";
 import Certh from "../Symbols/Certh_19.svg.png";
 import WhiteHand from "../Symbols/WhiteHand.png";
-import minastirith from "../Symbols/minastirith.jpg";
 
 function CharacterHolder({ characters, onRaceChange }) {
-    const [searchTerm, setSearchTerm] = useState("")
-    const [raceSymbol, setRaceSymbol] = useState('')
-    const [raceImage, setRaceImage] = useState('');
+    const [searchTerm, setSearchTerm] = useState("");
+    const [raceSymbol, setRaceSymbol] = useState('');
     const {characterRace} = useParams();
     
     const filteredList = characters.filter(character => character.race.toLowerCase() === characterRace)
@@ -24,6 +22,7 @@ function CharacterHolder({ characters, onRaceChange }) {
         return <Character key={character.id + character.name} character={character}/>
     })
 
+    const navigate = useNavigate();
     useEffect(() => {
         onRaceChange(characterRace)
         switch(characterRace){
@@ -43,6 +42,7 @@ function CharacterHolder({ characters, onRaceChange }) {
                 setRaceSymbol(WhiteHand);
                 break;
         }
+        navigate(`${filteredList[0].name.toLowerCase()}`)
     }, [])
 
     
@@ -50,7 +50,6 @@ function CharacterHolder({ characters, onRaceChange }) {
     return (
         <div>
             <div className={`characters-page `}>
-            {/* <img className='raceImage' src={raceImage}/> */}
                 <div className='characters-page-left'>
                     <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
                         <div className='characters-list'>

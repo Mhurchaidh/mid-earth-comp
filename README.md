@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Middle-Earth Compendium
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+IMAGE OF HOME PAGE AND A RACE PAGE TO SHOW THE SEARCH
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The Middle-Earth Compendum is a collection of Characters from JRR Tolkien's Lord of the Rings universe. The characters are filtered into  five different races (Men, Elves, Maiar, Dwarves, and Orc-Kind) and are displayed on the page once a race has been selected.  Information about a character will be displayed when a character is selected.  There is also a search within each page of characters that will search through all characters on the page.  There is also a form to create a new character that can be added to any of the pages of characters.
 
-### `npm start`
+## User Navigation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As a user, you will be able to search for characters based on the five races provided in the home page. After clicking on your desired race, you will be brought to a page consisting of characters from that race. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can navigate down the list characters in the page by scrolling or you can search for a specific character of that race by typing into the search bar.
 
-### `npm test`
+By clicking on a character you can display their Name, Culture, Gender, as well as information about the character.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a user, you can add a new character to any of the races by clicking the add new character button on the homepage.
 
-### `npm run build`
+You can return to the home page at any point by clicking on the Middle-Earth Compendium button in the top left of each page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
+1. Fork the project from [GitHub](https://github.com/Mhurchaidh/mid-earth-comp).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Enter `npm i && start` in terminal and 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. json-server --watch db.json
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributers
+### Ben Murchie
+- GitHub: https://github.com/Mhurchaidh
+### Colm Traci
+- GitHub: https://github.com/colmtraci
