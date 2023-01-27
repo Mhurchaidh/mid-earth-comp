@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import stamp from "../Symbols/stamp.png";
 
 function Form({onFormSubmit}) {
 
     const initialFormData = {
+        id: '',
         name: '',
         race: 'Men',
         gender: '',
@@ -27,7 +29,7 @@ function Form({onFormSubmit}) {
 
         fetch('http://localhost:3000/characters', config)
         .then(resp => resp.json())
-        .then(onFormSubmit)
+        .then((newChar) => {onFormSubmit(newChar)})
         .then(setFormData(initialFormData))
     }
 
@@ -37,20 +39,20 @@ function Form({onFormSubmit}) {
     }
 
     return (
-        <div className="form">
-            <form onSubmit={handleSubmit}>
-                <input value={name} name='name' type='text' placeholder="Name..." onChange={handleFormChange}/>
-                <select value={race} name='race' onChange={handleFormChange}>
+        <div className="form-container">
+            <form className='form' onSubmit={handleSubmit}>
+                <input className='inputType' id='formName' value={name} name='name' type='text' placeholder="Name..." onChange={handleFormChange}/>
+                <select className='inputType' id='formRace' value={race} name='race' onChange={handleFormChange}>
                     <option>Men</option>
                     <option>Elves</option>
                     <option>Maiar</option>
                     <option>Dwarves</option>
                     <option>Orcs</option>
                 </select>
-                <input value={culture} type='text' name='culture' placeholder='Culture...' onChange={handleFormChange}/>
-                <input value={gender} name='gender' type='text' placeholder="Gender..." onChange={handleFormChange}/>
-                <input value={text} name='text' type='text' placeholder='Description...' onChange={handleFormChange}/>
-                <button>Submit</button>
+                <input className='inputType' id='formCulture' value={culture} type='text' name='culture' placeholder='Culture...' onChange={handleFormChange}/>
+                <input className='inputType' id='formGender' value={gender} name='gender' type='text' placeholder="Gender..." onChange={handleFormChange}/>
+                <input  className='inputType' id='formText' value={text} name='text' type='text' placeholder='Description...' onChange={handleFormChange}/>
+                <input type='image' src={stamp} id='formButton'/>
             </form>
         </div>
     )
