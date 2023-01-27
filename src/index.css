@@ -1,12 +1,88 @@
 * {
+  margin: 0;
+  --men-background: rgb(230, 230, 230);
+  --elven-background: rgb(218, 255, 243);
+  --maiar-background: rgb(222, 217, 248);
+  --dwarven-background: rgb(163, 163, 163);
+  --orc-background: rgb(43, 42, 42); 
+
+  --men-header: rgb(226, 127, 6);
+  --elven-header: rgb(25, 180, 180);
+  --maiar-header: rgb(207, 43, 139);
+  --dwarven-header: rgb(255, 182, 45);
+  --orc-header: rgb(212, 36, 5);
+}
+
+.App {
   background-color: rgb(250, 243, 225);
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./Symbols/theonering.jpg');
+  background-position: center;
+  background-size: 220vh;
+  background-repeat: no-repeat;
+}
+
+/* .new {
+  background-image: url('./Symbols/scroll.png');
+  background-position: center;
+  background-size: 70vh;
+  background-repeat: no-repeat;
+} */
+
+.men-page {
+  background-image: url('./Symbols/minastirith.jpg');
+  background-position: center;
+  background-size: 230vh;
+  background-repeat: no-repeat;
+}
+
+.elves-page {
+  background-image: url('./Symbols/rivendell.png');
+  background-position: center;
+  background-size: 200vh;
+  background-repeat: no-repeat;
+}
+
+.maiar-page {
+  background-image: url('./Symbols/gandalfvsbalrog.jpg');
+  background-position: center;
+  background-size: 200vh;
+  background-repeat: no-repeat;
+}
+
+.dwarves-page {
+  background-image: url('./Symbols/erebor.jpg');
+  background-position: center;
+  background-size: 200vh;
+  background-repeat: no-repeat;
+}
+
+.orcs-page {
+  background-image: url('./Symbols/mordor.jpg');
+  background-position: center;
+  background-size: 260vh;
+  background-repeat: no-repeat;
+}
+
+.elves-span {
+  background-color: black;
+}
+
+.addNew h3{
+  height: min-content;
+  width: min-content;
+  background-color: rgb(179, 151, 100);
+  color: black;
+  border: solid;
+  border-color: black;
 }
 
 .race-container {
   display: flex;
   overflow-wrap: wrap;
   margin-top: 15vh;
-  margin-left: 4.5vw;
+  margin-left: 5vw;
   justify-content: space-between;
   height: min-content;
   width: 90vw;
@@ -15,22 +91,28 @@
 .header {
   display: flex;
   justify-content: space-between;
+  width: 100vw;
 }
 
 #home-button {
   display: absolute;
   border-radius: 0 0 15px 0;
-  background-color: rgb(78, 13, 51);
-  width: 25vw;
-  height: min-content;
+  /* background-color: rgb(78, 13, 51); */
+  background-color: rgb(46, 46, 46);
+  width: 18vw;
+  height: 6vh;
+  min-height: max-content;
   border: solid;
   border-color: black;
 }
 
 #home-button h1 {
-  color: rgb(255, 229, 196);
+  /* color: rgb(255, 229, 196); */
+  color: rgb(179, 151, 100);
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
+  font-size: 2.5vh;
+  margin-top: 1.5vh;
 }
 
 a:link { text-decoration: none; }
@@ -52,20 +134,73 @@ a:active { text-decoration: none; }
   height: 700px;
   width: 400px;
   text-align: center;
+  background-color: rgb(46, 46, 46);
   /* flex-basis: 300px;
   flex-grow: 0;
   flex-shrink: 0; */
 }
 
-.form {
+.form-container {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  /* width: 500px; */
+  width: 40vw;
+  /* min-width: 670px; */
+  height: 80vh;
+  /* min-height: 1000px; */
   margin: 0 auto;
-  padding: 1.75rem;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./Symbols/scroll.png');
+  background-position: center;
+  /* background-size: 800px; */
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-input,
+.form {
+  position: relative;
+  left: 16%;
+  top: 35%;
+  width: 70%;
+  height: 50%;
+}
+
+#formGender {
+  position: relative;
+  bottom: 20%;
+}
+
+#formCulture {
+  position: relative;
+  left: 10%;
+}
+
+#formRace {
+  position: relative;
+  left: 5%;
+}
+
+#formText {
+  position: relative;
+  bottom: 20%;
+  left: 5%;
+}
+
+#formButton {
+  position: relative;
+  height: 40%;
+  top: 20%;
+  left: 25%;
+}
+
+.inputType {
+  height: 8vh;
+  width: 8vw;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* input,
 textarea,
 select {
   margin-top: 0.25rem;
@@ -76,19 +211,19 @@ select {
   font-weight: bold;
   transition: all 0.3s;
   border: 2px solid black;
-}
+} */
 
 .race-container .race:hover {
   /* border-width: 3px; */
   border-top-width: 10px;
   border-radius: 20px 20px 5px 5px;
-  border-color: rgb(78, 13, 51);
+  /* border-color: rgb(78, 13, 51); */
+  border-color: rgb(179, 151, 100);
   cursor: url("./Symbols/oneringpng.png") auto;
 }
 
 .race-container .race h1 {
   margin-top: 110px;
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .characters-page {
@@ -98,33 +233,62 @@ select {
 
 .characters-page-left {
   flex-direction: column;
+  margin-left: 90px;
+  margin-top: 15vh;
 }
 
 .character-card {
-  border: solid;
+  /* border: solid;
   border-color: black;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px; */
   text-align: center;
   width: 10vw;
 }
 
+.men-card {
+  color: var(--men-header);
+}
+
+.elves-card {
+  color: var(--elven-header);
+}
+
+.maiar-card {
+  color: var(--maiar-header);
+}
+
+.dwarves-card {
+  color: var(--dwarven-header);
+}
+
+.orcs-card {
+  color: var(--orc-header);
+}
+
 .search {
   max-height: 5vh;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .characters-list {
+  display: flex;
   flex-direction: column;
-  margin-top: 5vh;
-  height: 80vh;
+  height: min-content;
+  max-height: 70vh;
   width: min-content; 
   overflow: scroll;
-  justify-content: space-between;
+  overflow-x: hidden;
+  justify-content: flex-start;
+}
+
+.characters-list::-webkit-scrollbar {
+  display: none;
 }
 
 .character-details {
   max-width: 60vw;
   margin-left: 13vw;
-  margin-top: 12vh;
+  margin-top: 20vh;
 }
 
 .character-details img {
@@ -134,77 +298,138 @@ select {
   border-color: black;
 }
 
+.character-details h1 {
+  margin-bottom: 5vh;
+}
+
 .character-details p {
   font-family: sans-serif;
+  margin-top: 5vh;
   letter-spacing: 1px;
   line-height: 1.7;
+  overflow: scroll;
+  height: min-content;
+  max-height: 50vh;
+  background-color: rgba(20, 20, 20, 0.61);
+}
+
+.character-details p::-webkit-scrollbar {
+  display: none;
 }
 
 .symbol {
   max-width: 70%;
   max-height: 100%;
-  
 }
 
-.men {
+
+#mirkwood {
+  margin-top: 12vh;
+}
+
+#white-tree {
   margin-top: 3vh;
-  background-color: rgb(230, 230, 230);
+}
+
+#black-speech {
+  margin-top: 5vh;
+}
+
+/* .men {
+  background-color: var(--men-background);
 }
 
 .elves {
-  margin-top: 12vh;
-  background-color: rgb(217, 253, 217);
+  background-color: var(--elven-background);
 }
 
+
 .maiar {
-  margin-top: 5vh;
-  background-color: rgb(209, 236, 245);
+  background-color: var(--maiar-background);
 }
 
 .dwarves {
-  background-color: rgb(163, 163, 163);
+  background-color: var(--dwarven-background);
 }
 
-.orc-kind {
-  background-color: rgb(22, 22, 22);
-}
+.orcs {
+  background-color: var(--orc-background);
+} */
 
-#men {
-  background-color: rgb(230, 230, 230);
+/* #men {
+  background-color: var(--men-background);
 }
 
 #elves {
-  background-color: rgb(217, 253, 217);
+  background-color: var(--elven-background);
 }
 
 #maiar {
-  background-color: rgb(209, 236, 245);
+  background-color: var(--maiar-background);
 }
 
 #dwarves {
-  background-color: rgb(163, 163, 163);
+  background-color: var(--dwarven-background);
 }
 
 #orc-kind {
-  background-color: rgb(22, 22, 22);
-}
+  background-color: var(--orc-background);
+} */
 
 #men h1 {
-  color: rgb(226, 127, 6);
+  color: var(--men-header);
 }
 
 #elves h1 {
-  color: rgb(4, 128, 128);
+  color: var(--elven-header);
 }
 
 #maiar h1 {
-  color: rgb(226, 127, 6);
+  color: var(--maiar-header);
 }
 
 #dwarves h1 {
-  color: rgb(255, 217, 3);
+  color: var(--dwarven-header);
 }
 
 #orc-kind h1 {
-  color: rgb(212, 5, 5);
+  color: var(--orc-header);
+}
+
+.men-h1 {
+  color: var(--men-header);
+}
+
+.elves-h1 {
+  color: var(--elven-header);
+}
+
+.maiar-h1 {
+  color: var(--maiar-header);
+}
+
+.dwarves-h1 {
+  color: var(--dwarven-header);
+}
+
+.orcs-h1 {
+  color: var(--orc-header);
+}
+
+.orcs-p {
+  color: white;
+}
+
+.elves-p {
+  color: var(--elven-background)
+}
+
+.men-p {
+  color: var(--men-background);
+}
+
+.race-symbol {
+  height: min-content;
+  margin-top: 10vh;
+  width: 20vw;
 }

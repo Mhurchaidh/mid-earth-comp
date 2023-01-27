@@ -4,11 +4,11 @@ function Search({ searchTerm, onSearchChange }) {
         <div className="search">
             <input
               value={searchTerm}
+              className="search"
               type="text"
               placeholder="Search Characters"
               onChange={(e) => onSearchChange(e.target.value)}
             />
-            <i>🔎</i>
       </div>
     )
 }
