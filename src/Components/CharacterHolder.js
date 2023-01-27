@@ -3,11 +3,16 @@ import Search from "./Search";
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
-import pngegg from "../Symbols/pngegg.png";
-import mirkwood from "../Symbols/mirkwood.png.png";
-import maiar from "../Symbols/maiar-symbol.png";
-import Certh from "../Symbols/Certh_19.svg.png";
+// import pngegg from "../Symbols/pngegg.png";
+// import mirkwood from "../Symbols/mirkwood.png.png";
+// import maiar from "../Symbols/maiar-symbol.png";
+// import Certh from "../Symbols/Certh_19.svg.png";
 import WhiteHand from "../Symbols/WhiteHand.png";
+import whiteree from '../Symbols/whitetree.png';
+import whitemirkwood from '../Symbols/whitemirkwood.png';
+import certhwhite from '../Symbols/certhwhite.png';
+import maiarsymbolwhite from '../Symbols/whitemaiarsymbol.png';
+
 
 function CharacterHolder({ characters, onRaceChange }) {
     const [searchTerm, setSearchTerm] = useState("");
@@ -27,16 +32,16 @@ function CharacterHolder({ characters, onRaceChange }) {
         onRaceChange(characterRace)
         switch(characterRace){
             case 'men':
-                setRaceSymbol(pngegg);
+                setRaceSymbol(whiteree);
                 break;
             case 'elves':
-                setRaceSymbol(mirkwood);
+                setRaceSymbol(whitemirkwood);
                 break;
             case 'maiar':
-                setRaceSymbol(maiar);
+                setRaceSymbol(maiarsymbolwhite);
                 break;
             case 'dwarves':
-                setRaceSymbol(Certh);
+                setRaceSymbol(certhwhite);
                 break;
             case 'orcs':
                 setRaceSymbol(WhiteHand);

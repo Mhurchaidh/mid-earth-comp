@@ -1,6 +1,5 @@
 # Middle-Earth Compendium
 
-IMAGE OF HOME PAGE AND A RACE PAGE TO SHOW THE SEARCH
 
 ## Description
 

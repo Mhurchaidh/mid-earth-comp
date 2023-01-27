@@ -52,7 +52,7 @@ function Form({onFormSubmit}) {
                 <input className='inputType' id='formCulture' value={culture} type='text' name='culture' placeholder='Culture...' onChange={handleFormChange}/>
                 <input className='inputType' id='formGender' value={gender} name='gender' type='text' placeholder="Gender..." onChange={handleFormChange}/>
                 <input  className='inputType' id='formText' value={text} name='text' type='text' placeholder='Description...' onChange={handleFormChange}/>
-                <input type='image' src={stamp} id='formButton'/>
+                <input type='image' src={stamp} alt='Wax Stamp' id='formButton'/>
             </form>
         </div>
     )
