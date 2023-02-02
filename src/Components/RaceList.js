@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import pngegg from "../Symbols/pngegg.png";
-// import mirkwood from "../Symbols/mirkwood.png.png";
-// import maiar from "../Symbols/maiar-symbol.png";
-// import Certh from "../Symbols/Certh_19.svg.png";
 import WhiteHand from "../Symbols/WhiteHand.png";
 import whiteree from '../Symbols/whitetree.png';
 import whitemirkwood from '../Symbols/whitemirkwood.png';
