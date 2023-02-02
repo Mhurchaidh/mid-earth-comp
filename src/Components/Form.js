@@ -22,12 +22,13 @@ function Form({onFormSubmit}) {
         const config = {
             method: "POST",
             headers: {
-                'Content-Type': "application/json"
+                'Content-Type': "application/json",
+                'Accept': 'application/json'
             },
             body: JSON.stringify(formData)
         }
 
-        fetch('http://localhost:3000/characters', config)
+        fetch('https://mid-earth-server.onrender.com', config)
         .then(resp => resp.json())
         .then((newChar) => {onFormSubmit(newChar)})
         .then(setFormData(initialFormData))

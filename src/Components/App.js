@@ -14,7 +14,12 @@ function App() {
   const [currentRace, setCurrentRace] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/characters')
+    fetch('https://mid-earth-server.onrender.com', {
+      headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+      }
+    })
     .then(resp => resp.json())
     .then(characters => setCharactersArray(characters))
   }, [])
