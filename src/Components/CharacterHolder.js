@@ -28,6 +28,7 @@ function CharacterHolder({ characters, onRaceChange }) {
     })
 
     const navigate = useNavigate();
+    const characterName = useParams();
     useEffect(() => {
         onRaceChange(characterRace)
         switch(characterRace){
@@ -47,7 +48,11 @@ function CharacterHolder({ characters, onRaceChange }) {
                 setRaceSymbol(WhiteHand);
                 break;
         }
+        if(!characterName) {
+            navigate(characterName.toLowerCase())
+        } else {
         navigate(`${filteredList[0].name.toLowerCase()}`)
+        }
     }, [])
 
     
