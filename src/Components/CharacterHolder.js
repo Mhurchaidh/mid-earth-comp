@@ -3,10 +3,6 @@ import Search from "./Search";
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
-// import pngegg from "../Symbols/pngegg.png";
-// import mirkwood from "../Symbols/mirkwood.png.png";
-// import maiar from "../Symbols/maiar-symbol.png";
-// import Certh from "../Symbols/Certh_19.svg.png";
 import WhiteHand from "../Symbols/WhiteHand.png";
 import whiteree from '../Symbols/whitetree.png';
 import whitemirkwood from '../Symbols/whitemirkwood.png';
@@ -22,13 +18,13 @@ function CharacterHolder({ characters, onRaceChange }) {
     const filteredList = characters.filter(character => character.race.toLowerCase() === characterRace)
     .sort((characterA, characterB) => characterA.name.localeCompare(characterB.name))
     .filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()))
-
+    
     const characterList = filteredList.map(character => {
         return <Character key={character.id + character.name} character={character}/>
     })
 
+    const {characterName = `${filteredList[0].name.toLowerCase()}`} = useParams();
     const navigate = useNavigate();
-    const characterName = useParams();
     useEffect(() => {
         onRaceChange(characterRace)
         switch(characterRace){
@@ -48,11 +44,7 @@ function CharacterHolder({ characters, onRaceChange }) {
                 setRaceSymbol(WhiteHand);
                 break;
         }
-        if(characterName) {
-            navigate(characterName.toLowerCase())
-        } else {
-        navigate(`${filteredList[0].name.toLowerCase()}`)
-        }
+        navigate(characterName)
     }, [])
 
     
