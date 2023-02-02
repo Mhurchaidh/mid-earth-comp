@@ -28,7 +28,7 @@ function Form({onFormSubmit}) {
             body: JSON.stringify(formData)
         }
 
-        fetch('https://mid-earth-server.onrender.com', config)
+        fetch('https://mid-earth-server.onrender.com/characters', config)
         .then(resp => resp.json())
         .then((newChar) => {onFormSubmit(newChar)})
         .then(setFormData(initialFormData))
