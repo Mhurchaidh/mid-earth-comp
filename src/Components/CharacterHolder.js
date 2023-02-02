@@ -48,7 +48,7 @@ function CharacterHolder({ characters, onRaceChange }) {
                 setRaceSymbol(WhiteHand);
                 break;
         }
-        if(!characterName) {
+        if(characterName) {
             navigate(characterName.toLowerCase())
         } else {
         navigate(`${filteredList[0].name.toLowerCase()}`)
